@@ -298,7 +298,7 @@ delete from 영화 where 영화번호='00001';
 alter table 평점관리
 drop FOREIGN KEY 평점관리_ibfk_1; -- 기존 외래키 제거
 
-alter table 평점관리
+alter table 평점관리 
 add foreign key(영화번호) references 영화(영화번호) on delete cascade;
 
 delete from 영화 where 영화번호='00001';
